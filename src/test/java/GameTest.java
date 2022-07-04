@@ -84,7 +84,7 @@ public class GameTest {
         games.register(player8);
 
         assertThrows(NotRegisteredException.class, () -> {
-            games.round("Rise", "ALIGATOR6000");
+            games.round("Rise", "Uex2");
         });
     }
 }
