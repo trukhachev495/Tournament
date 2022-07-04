@@ -68,13 +68,23 @@ public class GameTest {
     }
 
     @Test
-    void roundWithUnRegisteredPlayer() {
+    void roundWithUnRegisteredPlayer1() {
         games.register(player6);
         games.register(player7);
         games.register(player8);
 
         assertThrows(NotRegisteredException.class, () -> {
             games.round("Vanya1", "SEREGA");
+        });
+    }
+    @Test
+    void roundWithUnRegisteredPlayer2() {
+        games.register(player6);
+        games.register(player7);
+        games.register(player8);
+
+        assertThrows(NotRegisteredException.class, () -> {
+            games.round("Rise", "ALIGATOR6000");
         });
     }
 }
